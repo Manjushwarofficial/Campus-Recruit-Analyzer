@@ -19,14 +19,16 @@ Campus Recruit Analyzer aims to provide a comprehensive solution for managing an
 <img width="1280" height="832" alt="Screenshot 2026-04-26 at 11 42 59 PM" src="https://github.com/user-attachments/assets/20d8088e-e075-4950-b99a-6d83673d4f43" />
 <img width="1280" height="832" alt="Screenshot 2026-04-26 at 11 42 50 PM" src="https://github.com/user-attachments/assets/d4b624b4-7ce1-4a80-bfed-1533c2000cf4" />
 
-
-
-
 ## Features
 - Efficient management of recruitment data.
 - Analytical tools to evaluate recruitment trends.
 - User-friendly interface for recruiters and institutions.
 - Comprehensive documentation and diagrams for better understanding.
+
+## UML Class and Sequence Diagram
+<img width="648" height="735" alt="Screenshot 2026-04-26 at 11 45 48 PM" src="https://github.com/user-attachments/assets/a0cf6716-ae52-4ff4-991c-a34e9d657f93" />
+-
+<img width="700" height="779" alt="Screenshot 2026-04-26 at 11 46 06 PM" src="https://github.com/user-attachments/assets/c9e655ac-9c1f-4b9c-abe3-dd06ed6031f1" />
 
 ## Documentation
 The repository includes the following documentation to help you understand the project:

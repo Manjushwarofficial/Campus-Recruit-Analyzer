@@ -1,0 +1,616 @@
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Email Automation Suite</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #F7F4F3;
+}
+
+QWidget {
+    background-color: #F7F4F3;
+    color: #564D4A;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+QPushButton {
+    background-color: #564D4A;
+    color: #F7F4F3;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    min-width: 120px;
+}
+
+QPushButton:hover {
+    background-color: #6B6360;
+}
+
+QPushButton:pressed {
+    background-color: #453C39;
+}
+
+QLabel {
+    color: #564D4A;
+}
+
+QFrame {
+    background-color: #F7F4F3;
+    border: 1px solid #E0DDD9;
+    border-radius: 12px;
+}
+
+QMenuBar {
+    background-color: #564D4A;
+    color: #F7F4F3;
+    border: none;
+    padding: 4px;
+}
+
+QMenuBar::item {
+    background-color: transparent;
+    padding: 8px 16px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected {
+    background-color: #6B6360;
+}
+
+QStatusBar {
+    background-color: #564D4A;
+    color: #F7F4F3;
+    border: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="welcomeFrame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame#welcomeFrame {
+    background-color: #F7F4F3;
+    border: none;
+    border-radius: 0px;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="welcomeLayout">
+       <property name="spacing">
+        <number>30</number>
+       </property>
+       <property name="leftMargin">
+        <number>50</number>
+       </property>
+       <property name="topMargin">
+        <number>80</number>
+       </property>
+       <property name="rightMargin">
+        <number>50</number>
+       </property>
+       <property name="bottomMargin">
+        <number>80</number>
+       </property>
+       <item>
+        <spacer name="topSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="titleLabel">
+         <property name="text">
+          <string>Email Automation Suite</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font-size: 48px;
+    font-weight: bold;
+    color: #564D4A;
+    margin: 20px 0px;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="welcomeLabel">
+         <property name="text">
+          <string>Welcome! Ready to streamline your email workflow?</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font-size: 24px;
+    color: #564D4A;
+    margin: 10px 0px;
+    font-weight: 300;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="descriptionLabel">
+         <property name="text">
+          <string>Automate your email tasks, schedule campaigns, and manage your communications with ease. Get started by configuring your email accounts or explore the automation features.</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+    font-size: 16px;
+    color: #564D4A;
+    margin: 20px 40px;
+    line-height: 1.5;
+}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="buttonSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="buttonLayout">
+         <property name="spacing">
+          <number>20</number>
+         </property>
+         <item>
+          <spacer name="leftButtonSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="getStartedBtn">
+           <property name="text">
+            <string>Get Started</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: #564D4A;
+    color: #F7F4F3;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 160px;
+}
+
+QPushButton:hover {
+    background-color: #6B6360;
+    transform: translateY(-2px);
+}
+
+QPushButton:pressed {
+    background-color: #453C39;
+    transform: translateY(0px);
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="configureBtn">
+           <property name="text">
+            <string>Configure Settings</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+    background-color: transparent;
+    color: #564D4A;
+    border: 2px solid #564D4A;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 160px;
+}
+
+QPushButton:hover {
+    background-color: #564D4A;
+    color: #F7F4F3;
+}
+
+QPushButton:pressed {
+    background-color: #453C39;
+    color: #F7F4F3;
+}</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="rightButtonSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="bottomSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QFrame" name="featureFrame">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QFrame {
+    background-color: rgba(86, 77, 74, 0.05);
+    border: 1px solid rgba(86, 77, 74, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="featureLayout">
+          <property name="spacing">
+           <number>40</number>
+          </property>
+          <property name="leftMargin">
+           <number>30</number>
+          </property>
+          <property name="topMargin">
+           <number>20</number>
+          </property>
+          <property name="rightMargin">
+           <number>30</number>
+          </property>
+          <property name="bottomMargin">
+           <number>20</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="feature1Layout">
+            <item>
+             <widget class="QLabel" name="feature1Title">
+              <property name="text">
+               <string>📧 Smart Automation</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font-size: 18px;
+    font-weight: bold;
+    color: #564D4A;
+    margin-bottom: 8px;
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="feature1Desc">
+              <property name="text">
+               <string>Create intelligent email workflows that adapt to your needs</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font-size: 14px;
+    color: #564D4A;
+    text-align: center;
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="feature2Layout">
+            <item>
+             <widget class="QLabel" name="feature2Title">
+              <property name="text">
+               <string>⏰ Schedule & Send</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font-size: 18px;
+    font-weight: bold;
+    color: #564D4A;
+    margin-bottom: 8px;
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="feature2Desc">
+              <property name="text">
+               <string>Schedule emails and campaigns for optimal delivery times</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font-size: 14px;
+    color: #564D4A;
+    text-align: center;
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="feature3Layout">
+            <item>
+             <widget class="QLabel" name="feature3Title">
+              <property name="text">
+               <string>📊 Analytics</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font-size: 18px;
+    font-weight: bold;
+    color: #564D4A;
+    margin-bottom: 8px;
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="feature3Desc">
+              <property name="text">
+               <string>Track performance and optimize your email strategies</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+    font-size: 14px;
+    color: #564D4A;
+    text-align: center;
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew_Campaign"/>
+    <addaction name="actionOpen"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEmail">
+    <property name="title">
+     <string>Email</string>
+    </property>
+    <addaction name="actionCompose"/>
+    <addaction name="actionSchedule"/>
+    <addaction name="actionTemplates"/>
+   </widget>
+   <widget class="QMenu" name="menuAutomation">
+    <property name="title">
+     <string>Automation</string>
+    </property>
+    <addaction name="actionCreate_Workflow"/>
+    <addaction name="actionManage_Rules"/>
+    <addaction name="actionView_Logs"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionEmail_Accounts"/>
+    <addaction name="actionPreferences"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionDocumentation"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEmail"/>
+   <addaction name="menuAutomation"/>
+   <addaction name="menuSettings"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">QStatusBar {
+    background-color: #564D4A;
+    color: #F7F4F3;
+    border: none;
+    padding: 8px;
+}</string>
+   </property>
+  </widget>
+  <action name="actionNew_Campaign">
+   <property name="text">
+    <string>New Campaign</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionCompose">
+   <property name="text">
+    <string>Compose Email</string>
+   </property>
+  </action>
+  <action name="actionSchedule">
+   <property name="text">
+    <string>Schedule Email</string>
+   </property>
+  </action>
+  <action name="actionTemplates">
+   <property name="text">
+    <string>Email Templates</string>
+   </property>
+  </action>
+  <action name="actionCreate_Workflow">
+   <property name="text">
+    <string>Create Workflow</string>
+   </property>
+  </action>
+  <action name="actionManage_Rules">
+   <property name="text">
+    <string>Manage Rules</string>
+   </property>
+  </action>
+  <action name="actionView_Logs">
+   <property name="text">
+    <string>View Logs</string>
+   </property>
+  </action>
+  <action name="actionEmail_Accounts">
+   <property name="text">
+    <string>Email Accounts</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+  <action name="actionDocumentation">
+   <property name="text">
+    <string>Documentation</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

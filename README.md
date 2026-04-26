@@ -16,6 +16,10 @@ Campus Recruit Analyzer aims to provide a comprehensive solution for managing an
 ## Screenshots
 <img width="1280" height="832" alt="Screenshot 2026-04-17 at 1 48 04 PM" src="https://github.com/user-attachments/assets/e0066b9f-5cd8-482a-92d8-b14e9842b05a" />
 <img width="1280" height="832" alt="Screenshot 2026-04-17 at 1 46 01 PM" src="https://github.com/user-attachments/assets/0bd184aa-7ba7-477b-a2cf-7dd3ed21fc98" />
+<img width="1280" height="832" alt="Screenshot 2026-04-26 at 11 42 59 PM" src="https://github.com/user-attachments/assets/20d8088e-e075-4950-b99a-6d83673d4f43" />
+<img width="1280" height="832" alt="Screenshot 2026-04-26 at 11 42 50 PM" src="https://github.com/user-attachments/assets/d4b624b4-7ce1-4a80-bfed-1533c2000cf4" />
+
+
 
 
 ## Features
